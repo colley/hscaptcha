@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>hscaptcha-sample</artifactId>
+  <groupId>com.hs.hscaptcha</groupId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+
+	<properties>
+		<hscaptcha.version>1.0</hscaptcha.version>
+		<junit.version>4.10</junit.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.hs.captcha</groupId>
+		    <artifactId>hscaptcha</artifactId>
+		    <version>${hscaptcha.version}</version>
+	  	</dependency>
+	  	
+		<dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>${junit.version}</version>
+	      <scope>test</scope>
+	    </dependency>
+	</dependencies>
+	
+	
+	
+	<build>
+		<finalName>hscaptcha-sample</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.10</version>
+				<configuration>
+					<webDefaultXml>
+						src/main/resources/webdefault.xml
+					</webDefaultXml>
+					<webAppConfig>
+						<connectorNames>
+							<connectorName>0.0.0.0:8099</connectorName>
+						</connectorNames>
+						<contextPath>/hscaptcha</contextPath>
+						<tempDirectory>
+							${project.build.directory}/work
+						</tempDirectory>
+						<defaultsDescriptor>
+							src/main/resources/webdefault.xml
+						</defaultsDescriptor>
+					</webAppConfig>
+					<connectors>
+						<connector
+							implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<port>8099</port>
+							<maxIdleTime>60000</maxIdleTime>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

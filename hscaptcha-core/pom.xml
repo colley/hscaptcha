@@ -1,0 +1,149 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hs.captcha</groupId>
+  <artifactId>hscaptcha</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+	
+	<properties>
+		<spring.version>2.5.6.SEC02</spring.version>
+		<servlet-api.version>2.5</servlet-api.version>
+		<commons-logging.version>1.1.1</commons-logging.version>
+		<commons-collections.version>3.2</commons-collections.version>
+		 <commons-lang.version>2.6</commons-lang.version>
+		<commons-logging.version>1.1.1</commons-logging.version>
+		<commons-io.version>2.4</commons-io.version>
+		<commons-pool.version>1.5.4</commons-pool.version>
+		<jcaptcha.version>1.0</jcaptcha.version>
+		<log4j.version>1.2.16</log4j.version>
+		<slf4j-log4j12.version>1.6.2</slf4j-log4j12.version>
+		<commons-digester.version>1.8</commons-digester.version>
+		<hscommon-utils.version>0.0.1</hscommon-utils.version>
+	</properties>
+	
+	<dependencies>
+	
+		 <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>4.10</version>
+	      <scope>test</scope>
+	    </dependency>
+    
+		<dependency>
+			<groupId>com.hs.common-utils</groupId>
+  			<artifactId>hscommon-utils</artifactId>
+  			<version>${hscommon-utils.version}</version>
+  		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+		</dependency>
+	
+		
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${commons-collections.version}</version>
+		</dependency>
+
+		
+		<dependency>
+			<groupId>commons-digester</groupId>
+			<artifactId>commons-digester</artifactId>
+			<version>${commons-digester.version}</version>
+		</dependency>
+		
+		
+		<!-- <dependency>
+		  <groupId>com.octo.captcha</groupId>
+		  <artifactId>jcaptcha</artifactId>
+		  <version>${jcaptcha.version}</version>
+		</dependency> -->
+		
+	<!-- 	<dependency>
+		  <groupId>com.octo.captcha</groupId>
+		  <artifactId>jcaptcha-api</artifactId>
+		  <version>${jcaptcha.version}</version>
+		</dependency> -->
+		
+		<dependency>
+		  <groupId>com.jhlabs</groupId>
+		  <artifactId>filters</artifactId>
+		  <version>2.0.235</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j-log4j12.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		
+	</dependencies>
+	
+	
+	
+	<build>
+		<finalName>hscaptcha</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

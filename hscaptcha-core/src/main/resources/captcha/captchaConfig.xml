@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<captchas>
+	<user>
+		<list>
+			<userName>admin</userName>
+			<captCode>8888</captCode>
+		</list>
+		<list>
+			<userName>admin1</userName>
+			<captCode>88881</captCode>
+		</list>
+	</user>
+	<captcha>
+		<fontName>Arial</fontName>	<!-- 字体文件名称 -->
+		<dict>ABCDEFGHJKLMNPRSTUVWXYZ23456789</dict><!--生成的验证码字符串字典 -->
+		<fontSizeMax>35</fontSizeMax>	<!-- 字体随机大小最大值 -->
+		<fontSizeMin>30</fontSizeMin>	<!-- 字体随机大小最小值 -->
+		<spacingSize>2</spacingSize>	<!-- 字符粘连重叠像素 -->
+		<rotateRange>30</rotateRange>	<!-- 随机选择角度 -->
+		<sinMin>0.5</sinMin>	<!-- 正弦变换波最小值 -->
+		<sinMax>1</sinMax>	<!-- 正弦变换波最大值 -->
+		<waveMin>3</waveMin>	<!-- 正弦变换幅度最小值 -->
+		<waveMax>5</waveMax>	<!-- 正弦变换幅度最大值 -->
+	</captcha>
+	<captcha>
+		<fontName>Tahoma</fontName>
+		<dict>ABCDEFGHJKLMNPRSTUVWXYZ23456789</dict>
+		<fontSizeMax>30</fontSizeMax>
+		<fontSizeMin>25</fontSizeMin>
+		<spacingSize>2</spacingSize>
+		<rotateRange>30</rotateRange>
+		<sinMin>0.5</sinMin>
+		<sinMax>1</sinMax>
+		<waveMin>3</waveMin>
+		<waveMax>5</waveMax>
+	</captcha>
+	<captcha>
+		<fontName>Verdana</fontName>
+		<dict>ABCDEFGHJKLMNPRSTUVWXYZ23456789</dict>
+		<fontSizeMax>35</fontSizeMax>
+		<fontSizeMin>30</fontSizeMin>
+		<spacingSize>2</spacingSize>
+		<rotateRange>30</rotateRange>
+		<sinMin>0.5</sinMin>
+		<sinMax>1</sinMax>
+		<waveMin>3</waveMin>
+		<waveMax>5</waveMax>
+	</captcha>
+	<captcha>
+		<fontName>Helvetica</fontName>
+		<dict>ABCDEFGHJKLMNPRSTUVWXYZ23456789</dict>
+		<fontSizeMax>35</fontSizeMax>
+		<fontSizeMin>30</fontSizeMin>
+		<spacingSize>2</spacingSize>
+		<rotateRange>30</rotateRange>
+		<sinMin>0.5</sinMin>
+		<sinMax>1</sinMax>
+		<waveMin>3</waveMin>
+		<waveMax>5</waveMax>
+	</captcha>
+	<captcha>
+		<fontName>宋体</fontName>
+		<dict>ABCDEFGHJKLMNPRSTUVWXYZ23456789</dict>
+		<fontSizeMax>35</fontSizeMax>
+		<fontSizeMin>30</fontSizeMin>
+		<spacingSize>2</spacingSize>
+		<rotateRange>30</rotateRange>
+		<sinMin>0.5</sinMin>
+		<sinMax>1</sinMax>
+		<waveMin>3</waveMin>
+		<waveMax>5</waveMax>
+	</captcha>
+	<captcha>
+		<fontName>黑体</fontName>
+		<dict>ABCDEFGHJKLMNPRSTUVWXYZ23456789</dict>
+		<fontSizeMax>35</fontSizeMax>
+		<fontSizeMin>30</fontSizeMin>
+		<spacingSize>2</spacingSize>
+		<rotateRange>30</rotateRange>
+		<sinMin>0.5</sinMin>
+		<sinMax>1</sinMax>
+		<waveMin>3</waveMin>
+		<waveMax>5</waveMax>
+	</captcha>
+	
+	<captcha>
+		<fontName>幼圆</fontName>
+		<dict>ABCDEFGHJKLMNPRSTUVWXYZ23456789</dict>
+		<fontSizeMax>35</fontSizeMax>
+		<fontSizeMin>30</fontSizeMin>
+		<spacingSize>2</spacingSize>
+		<rotateRange>30</rotateRange>
+		<sinMin>0.5</sinMin>
+		<sinMax>1</sinMax>
+		<waveMin>3</waveMin>
+		<waveMax>5</waveMax>
+	</captcha>
+</captchas>

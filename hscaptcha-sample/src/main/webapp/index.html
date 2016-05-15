@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>播控管理首页</title>
+	<style type="">
+		a.verify_code_box {
+		    position: relative;
+		    display: block;
+		    _display: inline;
+		    /* float: right; */
+		    width: 123px;
+		    height: 50px;
+		    border: 1px solid #efefef;
+		    vertical-align: middle;
+		    cursor: pointer;
+		}
+		a.verify_code_box img {
+    		width: 123px;
+		    height: 50px;
+		}
+		img {
+		    border: 0 none;
+		    vertical-align: top;
+		}
+		
+		a.verify_code_box:hover .btn_change {
+   			 display: block;
+		}
+	 a.verify_code_box .btn_change {
+    display: none;
+    width: 123px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000',endColorstr='#7F000000');
+    color: #FFF;
+    line-height: 50px;
+    text-align: center;
+    font-style: normal;
+    cursor: pointer;
+}
+	</style>
+</head>
+<body>
+
+<a class="verify_code_box" onclick="javascript:document.getElementById('valid_code_pic').src='HscaptchaServlet';return false;" href="#">
+   <img id="valid_code_pic" name="valid_code_pic" src="HscaptchaServlet" />
+   <i tabindex="-1" class="btn_change">换一张</i>
+  </a>
+</body>
+</html>
